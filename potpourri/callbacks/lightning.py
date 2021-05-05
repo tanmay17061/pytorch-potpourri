@@ -33,9 +33,9 @@ class DataMapsCallback(pl.callbacks.Callback):
             self.get_probs_from_outputs_callable = get_probs_from_outputs_key_or_callable
         else:
             def _get_probs_from_outputs_callable(outputs):
-            """
-            TBD.
-            """
+                """
+                TBD.
+                """
                 if 'extra' not in outputs[0][0]:
                     raise ValueError()
                 extra = outputs[0][0]['extra']
@@ -56,9 +56,9 @@ class DataMapsCallback(pl.callbacks.Callback):
             self.get_labels_from_batch_callable = get_labels_from_batch_key_or_callable
         else:
             def _get_labels_from_batch_callable(batch):
-            """
-            TBD.
-            """
+                """
+                TBD.
+                """
                 if not isinstance(batch, dict):
                     raise ValueError()
                 if get_labels_from_batch_key_or_callable in batch:
