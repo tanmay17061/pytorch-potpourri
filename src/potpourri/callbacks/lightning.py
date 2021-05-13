@@ -37,12 +37,9 @@ class DataMapsCallback(pl.callbacks.Callback):
                 """
                 TBD.
                 """
-                if 'extra' not in outputs[0][0]:
-                    raise ValueError()
-                extra = outputs[0][0]['extra']
 
-                if get_probs_from_outputs_key_or_callable in extra:
-                    probs = extra[get_probs_from_outputs_key_or_callable]
+                if get_probs_from_outputs_key_or_callable in outputs:
+                    probs = outputs[get_probs_from_outputs_key_or_callable]
                     if isinstance(probs,torch.Tensor):
                         return probs.detach().cpu().numpy()
                     elif isinstance(probs,np.ndarray):
