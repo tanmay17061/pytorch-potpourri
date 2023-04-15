@@ -4,7 +4,7 @@ an *assortment* of interesting deep learning and machine learning algorithms, al
 [potpourri (*noun*): a *mixture* or *medley* of things.]  
 
 ---
-# Data maps
+# 1. Data maps
 An implementation of the dataset filtering technique by [this publication](https://arxiv.org/abs/2009.10795). This is a PyTorch Lightning callback that can be plugged into an existing `pytorch_lightning.LightningModule` with minimal code changes.  
 
 An example usage:
@@ -58,7 +58,7 @@ An example datamaps generated on a dummy binary classification [dataset](https:/
 Checkout [this](https://github.com/eliorc/tavolo) repository if you're looking for a callback in TensorFlow.
 
 ---
-# Batch Accumulated Metrics
+# 2. Batch Accumulated Metrics
 (This callback is explained in [this](https://medium.com/@tanmay17061/a7077ef8e55d) blog post. Feel free to check it out!)
 Summary: PyTorch does batch-wise aggregation of metrics. This behaviour is less ideal for some metrics (eg- AUC-ROC, macro-F1, etc).
 This is a PyTorch Lightning callback that can be plugged into an existing `pytorch_lightning.LightningModule` with minimal code changes.
