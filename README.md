@@ -56,3 +56,12 @@ An example datamaps generated on a dummy binary classification [dataset](https:/
 ![An example datamaps generated](https://user-images.githubusercontent.com/32801726/117187189-4883ef00-adf9-11eb-95e4-cb28750b2eb3.png)
 
 Checkout [this](https://github.com/eliorc/tavolo) repository if you're looking for a callback in TensorFlow.
+
+---
+# Batch Accumulated Metrics
+(This callback is explained in [this](https://medium.com/@tanmay17061/a7077ef8e55d) blog post. Feel free to check it out!)
+Summary: PyTorch does batch-wise aggregation of metrics. This behaviour is less ideal for some metrics (eg- AUC-ROC, macro-F1, etc).
+This is a PyTorch Lightning callback that can be plugged into an existing `pytorch_lightning.LightningModule` with minimal code changes.
+Once done, you can track the correct metrics at the end of each train/validation epoch.
+
+An example usage can be found in the [BatchAccumulatedMetricsCallback class implementation](src/potpourri/callbacks/lightning.py).
