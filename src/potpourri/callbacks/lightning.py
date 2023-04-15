@@ -118,6 +118,7 @@ class BatchAccumulatedMetricsCallback(pl.callbacks.Callback):
 
         from lightning.pytorch import Trainer
         from lightning.pytorch.callbacks import ModelCheckpoint, EarlyStopping
+        from potpourri.callbacks.lightning import BatchAccumulatedMetricsCallback
 
         trainer_callbacks = [
             ModelCheckpoint(
